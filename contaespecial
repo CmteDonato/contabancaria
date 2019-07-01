@@ -1,0 +1,37 @@
+package app;
+
+public class ContaEspecial extends Conta {
+	
+	private Double jurosClienteEspecial;
+	
+	public ContaEspecial() {
+	}
+
+	public ContaEspecial(Integer numeroDaConta, String nome, Double saldo, Double jurosClienteEspecial) {
+		super(numeroDaConta, nome, saldo, jurosClienteEspecial);
+		this.jurosClienteEspecial = jurosClienteEspecial;
+	}
+
+	public Double getjurosClienteEspecial() {
+		return jurosClienteEspecial;
+	}
+
+	public void setJuros(Double jurosClienteEspecial) {
+		this.jurosClienteEspecial = jurosClienteEspecial;
+	}
+	
+	public void novoSaldo() {
+		saldo += saldo * jurosClienteEspecial;
+	}
+	
+	@Override
+	public void sacar(double qtd) {
+		saldo -= (qtd / 100) * 0.1;
+	}
+	
+	@Override
+	public void deposito(double qtd) {
+		saldo += qtd;
+	}
+
+}
