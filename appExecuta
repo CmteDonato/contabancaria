@@ -1,0 +1,40 @@
+package app;
+
+public class appExecuta {
+
+	public static void main(String[] args) {
+			
+		
+		System.out.println("Conta Simples, O saldo de Thiago é:");	
+		Conta con1 = new Conta(4004, "Thiago", 5000.00, 0.5); 
+		System.out.println(con1.getSaldo()); 
+		con1.sacar(750.00); 
+		System.out.println("Novo Saldo: "+ con1.getSaldo());	
+		
+		System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+
+		System.out.println("Conta Especial, O saldo de Bruno é: ");
+		ContaEspecial con2 = new ContaEspecial(3746, "Beltrano", 3000.00, 0.1); 
+		System.out.println(con2.getSaldo()); 
+		con2.sacar(1230.00);
+		System.out.println("Novo Saldo: "+ con2.getSaldo()); 	
+		
+		System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+		
+		System.out.println("Conta Especial, Depósito de Bruno:");
+		con2.deposito(500.00); 
+		System.out.println("Saldo atualizado: "+ con2.getSaldo());
+		
+		System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+		
+		System.out.println("Conta Simples, Depósito de Fulano:");
+		con1.deposito(100.00); 
+		System.out.println("Saldo atualizado: "+ con1.getSaldo());	
+		
+		System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+		
+		
+
+	}
+
+}
